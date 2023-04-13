@@ -17,6 +17,12 @@ import com.example.demo6.dto.User;
 @Validated 
 public class ApiController {
 	
+	@GetMapping("/test")
+	public String test() {
+		
+		return "TEST";
+	}
+
 	// 문제 유효성 검사 동작하도록 코드 변경 하시오 !!
 	@RequestMapping("/user")
 	public User get(@RequestParam String name, @RequestParam Integer age) {
